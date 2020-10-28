@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_option"
+    android:id="@+id/bottomSheet"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    app:behavior_peekHeight="?actionBarSize"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/bg_option"
+        android:elevation="5dp"
+        android:layout_marginTop="5dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginTop="3dp"
+            android:gravity="center_horizontal">
+            <View
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_option_white"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtCantante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/health_tips_bottom_heading"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtCancion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:textSize="10sp"
+                android:text="@string/health_tips_bottom_subtext" />
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:id="@+id/firstAidLayout"
+                android:transitionName="layout_transition"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_option_white"
+                android:elevation="8dp"
+                android:layout_height="80dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_gravity="center"
+                    android:padding="8dp"
+                    android:src="@drawable/first_aid"
+                    android:transitionName="image_transition"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:contentDescription="@string/todo" />
+                <TextView
+                    android:id="@+id/textView"
+                    android:text="@string/title_firstaidkit"
+                    android:padding="8dp"
+                    android:transitionName="text_transition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/healthTips"
+                android:transitionName="example_transition"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_option_white"
+                android:elevation="8dp"
+                android:layout_height="80dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:src="@drawable/tips"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:contentDescription="@string/todo"/>
+            <TextView
+                android:text="Basic Health tips. \nFind your problem and solve it yourself"
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ambulance"
+                android:transitionName="example_transition"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_option_white"
+                android:elevation="8dp"
+                android:layout_height="80dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:src="@drawable/ambulance"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:contentDescription="@string/todo"/>
+            <TextView
+                android:text="Contact with Ambulance. \nFind your nearest ambulance and reserve it"
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/doctor"
+                android:transitionName="example_transition"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_option_white"
+                android:elevation="8dp"
+                android:layout_height="80dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:src="@drawable/doctor"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:contentDescription="@string/todo"/>
+            <TextView
+                android:text="Contact with Doctor. \nFine your nearest doctor and talk to him"
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
